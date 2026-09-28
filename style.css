@@ -1,0 +1,820 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --containerwidth: 400px;
+    --containerheight: 221px;
+}
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    /* vertical-align:baseline; */
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    /* border-collapse:collapse; */
+    border-spacing:0;
+    width:100%;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+* {box-sizing:border-box}
+
+.left {
+    max-width: 300px;
+    min-width: 250px;
+}
+
+.column {
+    float: left;
+    width:50%;
+}
+
+
+h2 {
+    color:black;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.big {
+    font-size: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height:120%;
+    
+}
+
+h1 {
+    color:black;
+    font-size: 30px;
+    font-family: 'Segoe UI';
+    margin: 0px;
+    
+}
+
+.bolded {
+    font-weight: bold;
+}
+
+.text {
+    position: absolute;
+    top: 302px;
+    left: 350px;
+    color:white;
+    font-size: 75px;
+}
+
+.text-shadow {
+    position: absolute;
+    top: 453px;
+    left: 383px;
+    color:rgba(19, 19, 19, 0.74);
+    font-size: 75px;
+}
+
+.profile_card {
+    /* position:relative; */
+    text-align: center;
+    width: 500px;
+    height: 290px;
+    background-size:cover;
+    background-position-y: 50%;
+    background-position-x: center;
+    background-image: linear-gradient(to top, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.801) 10%, rgba(255, 255, 255, 0) 30%), url("websiteAssets/portrait3-1.jpg");
+}
+
+.profile_card p {
+    position: relative;
+    font-family: 'Segoe UI';
+    font-weight: bold;
+    font-size:400%;
+    color: rgb(255, 255, 255);
+    margin-left:-37px;
+    top: 2.85em;
+    left:0.7em;
+    text-shadow:0px 0px 5px #bbb;
+}
+
+.whitespace {
+    color:white;
+}
+
+h3 {
+    color:seashell;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    padding:10px 15px;
+
+}
+
+p {
+    font-size: 18px;
+    font-family: 'HelveticaNeue-Light', Helvetica, sans-serif;
+    
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+
+    line-height: 130%;
+
+    text-align: justify;
+    text-justify: inter-word;
+    
+}
+
+.top_padding {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.bottom_padding {
+    padding-bottom: 50px;
+}
+
+.top_padding_large {
+    padding-top: 300px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 30px;
+    /* text-align: center; */
+    margin-left:1em;
+}
+
+.robotics {
+    margin-right:43%;
+}
+
+.profile_picture {
+    width:100px;
+    height:100px;
+    border-radius: 50%;
+    background-image: url(websiteAssets/ID_photo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+}
+
+
+.wrapper {
+    display: flex;
+    position: relative;
+}
+
+.wrapper .sidebar{
+    position: fixed;
+    width: 240px;
+    height: 100%;
+    background:#F8767D;
+    padding: 30px 0 ;
+    box-shadow: 6px 0px 9px rgba(0, 0, 0, 0.2);
+}
+
+.wrapper .sidebar h2{
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.wrapper .sidebar ul li{
+    padding: 15px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    border-top: 1px solid rgba(225,225,225,0.05);
+}
+
+.wrapper .sidebar ul li a{
+    color:seashell;
+    font-family: 'Roboto', sans-serif;
+    display: block;
+    text-decoration: none;
+}
+
+.wrapper .sidebar ul li:hover{
+    background:skyblue
+}
+
+.wrapper .sidebar ul li:hover a{
+    color:#fff;
+}
+
+.wrapper .main_content { 
+    width: 100%;
+    margin-left: 240px;
+    
+}
+
+.main_content_art {
+    width: 90%;
+    margin-left: 300px;
+    margin-right: 500px;
+    display:flex;
+    position:relative;
+    flex-wrap:wrap;
+    /* flex: 1 1 600px; */
+}
+
+.wrapper .main_content .header{
+    padding: 20px;
+    background:#fff;
+}
+
+.wrapper .main_content .info{
+    margin-left:60px;
+    margin-top: 20px;
+    color:#717171;
+    line-height: 25px;
+}
+
+.wrapper .main_content .info div{
+    margin-bottom:20px;
+}
+
+.light {
+    color: #eae6ed;
+}
+
+.setFont{
+    font-family: 'Segoe UI';
+}
+.grad{
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+}
+
+.mySlides1, .mySlides2{
+    display: none;
+}
+
+.slideshow-container {
+    width: 600px;
+    height: 400px;
+    background:black;
+    position: relative;
+    
+    /* margin: auto; */
+}
+
+td {
+    height: 50px;
+    vertical-align: top;
+}
+
+.main_content p {
+    padding: 20px 10px 10px 60px;
+    max-width: 1200px;
+}
+
+.main_content h1 {
+    padding: 30px 10px 0px 60px;
+}
+
+.main_content table p {
+    padding: 20px 10px 10px 60px;
+    max-width: 1200px;
+}
+
+.main_content table h2 {
+    padding: 30px 10px 0px 60px;
+}
+
+.coding_margin img {
+    margin-left: 600px;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 13px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.6s ease;
+    border-radius: 0 9px 9px 0;
+    user-select: none;
+}
+
+.prev {
+    left:0;
+}
+
+.next {
+    right: 0;
+    border-radius: 9px 0 0 9px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.1s;
+    animation-name: fade;
+    animation-duration: 1.1s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/*IMAGES FOR ART PAGE*/
+
+.container-wide {
+    width: 400px;
+    height: 230px;
+    object-fit: fill;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.container-wide:active {
+    width:800px;
+    height:500px;
+    
+    transform-origin: top left;
+    transform: scale(1);
+    transition: 0.5s ease;
+}
+
+
+
+/* image 1 */
+.image1 {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-image: url("websiteAssets/digital1.png");
+    transition: 0.4s ease
+}
+
+.image1:hover {
+    transform: scale(1.1)    
+}
+
+.container-wide:active .image1 {
+    transform: scale(1);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+    background-color:#000;
+}
+
+/* image 2 */
+
+.image2 {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-image: url("websiteAssets/digital2.png");
+    transition: 0.4s ease
+}
+
+.image2:hover {
+    transform: scale(1.1)    
+}
+
+.container-wide:active .image2 {
+    transform: scale(1);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+    background-color:#000;
+}
+
+
+
+/* image 3 */
+
+.image3 {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-image: url("websiteAssets/digital3.png");
+    transition: 0.4s ease
+}
+
+.image3:hover {
+    transform: scale(1.1)    
+}
+
+.container-wide:active .image3 {
+    transform: scale(1);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+    background-color:#000;
+}
+
+
+/* image 4 */
+.image4 {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-image: url("websiteAssets/digital4.png");
+    transition: 0.4s ease
+}
+
+.image4:hover {
+    transform: scale(1.1)    
+}
+
+.container-wide:active .image4 {
+    transform: scale(1);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+    background-color:#000;
+}
+
+
+
+
+.image5 {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-image: url("websiteAssets/digital5.png");
+    transition: 0.4s ease
+}
+
+.image5:hover {
+    transform: scale(1.1)    
+}
+
+.container-wide:active .image5 {
+    transform: scale(1);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+    background-color:#000;
+}
+
+
+
+
+.image6 {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-image: url("websiteAssets/traditional1.png");
+    transition: 0.4s ease
+}
+
+.image6:hover {
+    transform: scale(1.1)    
+}
+
+.container-wide:active .image6 {
+    transform: scale(1);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+    background-color:#000;
+}
+
+
+
+
+.image7 {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-image: url("websiteAssets/traditional2.jpg");
+    transition: 0.4s ease
+}
+
+.image7:hover {
+    transform: scale(1.1)    
+}
+
+.container-wide:active .image7 {
+    transform: scale(1);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+    background-color:#000;
+}
+
+
+
+
+.image8 {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-image: url("websiteAssets/traditional3.jpg");
+    transition: 0.4s ease
+}
+
+.image8:hover {
+    transform: scale(1.1)    
+}
+
+.container-wide:active .image8 {
+    transform: scale(1);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+    background-color:#000;
+}
+
+
+
+
+.image9 {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-image: url("websiteAssets/traditional4.jpg");
+    transition: 0.4s ease
+}
+
+.image9:hover {
+    transform: scale(1.1)    
+}
+
+.container-wide:active .image9 {
+    transform: scale(1);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+    background-color:#000;
+}
+
+
+
+
+.image10 {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-image: url("websiteAssets/traditional5.jpg");
+    transition: 0.4s ease
+}
+
+.image10:hover {
+    transform: scale(1.1)    
+}
+
+.container-wide:active .image10 {
+    transform: scale(1);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+    background-color:#000;
+}
+
+
+
+.image11 {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-image: url("websiteAssets/traditional6.jpg");
+    transition: 0.4s ease
+}
+
+.image11:hover {
+    transform: scale(1.1)    
+}
+
+.container-wide:active .image11 {
+    transform: scale(1);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+    background-color:#000;
+}
+
+
+.image12 {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-image: url("websiteAssets/traditional7.jpg");
+    transition: 0.4s ease
+}
+
+.image12:hover {
+    transform: scale(1.1)    
+}
+
+.container-wide:active .image12 {
+    transform: scale(1);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+    background-color:#000;
+}
+
+
+.image13 {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-image: url("websiteAssets/painting1.png");
+    transition: 0.4s ease
+}
+
+.image13:hover {
+    transform: scale(1.1)    
+}
+
+.container-wide:active .image13 {
+    transform: scale(1);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+    background-color:#000;
+}
+
+
+.image14 {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-image: url("websiteAssets/painting2.png");
+    transition: 0.4s ease
+}
+
+.image14:hover {
+    transform: scale(1.1)    
+}
+
+.container-wide:active .image14 {
+    transform: scale(1);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+    background-color:#000;
+}
+
+
+.image15 {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-image: url("websiteAssets/painting3.jpg");
+    transition: 0.4s ease
+}
+
+.image15:hover {
+    transform: scale(1.1)    
+}
+
+.container-wide:active .image15 {
+    transform: scale(1);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+    background-color:#000;
+}
+
+
+.image16 {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-image: url("websiteAssets/painting4.jpg");
+    transition: 0.4s ease
+}
+
+.image16:hover {
+    transform: scale(1.1)    
+}
+
+.container-wide:active .image16 {
+    transform: scale(1);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+    background-color:#000;
+}

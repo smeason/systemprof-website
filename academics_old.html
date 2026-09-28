@@ -1,0 +1,126 @@
+<html>
+
+<head>
+    <title>Samson's Home page</title>
+   <!-- <LINK REL="SHORTCUT ICON" href="./images/samson.ico">-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <!-- <script scr="D:\squamson\python\main.js"></script>-->
+    <!--<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">-->
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <center>
+            <div class="sidebar">
+                <h2>SAMSON WU</h2>
+
+                <div class="profile_picture"></div>
+
+                <ul>
+                    <li><a href="index.shtml">Home</a></li>
+                    <li><a href="coding.html">Coding</a></li>
+                    <li><a href="robotics.html">Robotics</a></li>
+                    <li><a href="academics.html">Academics</a></li>
+                    <li><a href="art.html">Art</a></li>
+                    <li><a href="hobbies.html">Hobbies</a></li>
+                </ul>
+
+                <h3 class="footer">
+                    <br><b>Email</b><br><a href="mailto:samsonsongwu@gmail.com">samsonsongwu@gmail.com</a><br>
+                    <br>Programming<br><a href="https://dmoj.ca/user/SamsonW">DMOJ</a><br>
+                    <br><b>Resume</b><br><a href="websiteAssets\SamsonWu_resume_latest.pdf"> January 2022</a><br>
+                    <br>Website made by Samson Wu<br>
+                </h3>
+            </div>
+        </center>
+
+        <div class="main_content">
+            <h1 class="big" style="padding-bottom:50px;">Academics</h1>
+            
+            <table>
+                <tr>
+                    <td class="left bottom_padding">
+                        <h2>U of T Engineering Science | University</h2>
+                        <p>In the first fall semester, I scored a GPA of 3.85/4.00 with all A's, while programming is A+.</p>
+                        
+                        <br>
+                        <p>
+                            As part of my structural engineering class, I lead my group to build a bridge as a group project and we had the 4th strongest bridge out of all the groups.
+                        </p>
+                    </td>
+                    <td>
+                        <img src="websiteAssets/university-of-toronto-logo.png" style="width:300px; height: auto;">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <center>
+                            <div class = "slideshow-container" style="display:block; margin-bottom:50px;"> 
+                                <div class = "mySlides1 fade">
+                                    <img src = "websiteAssets/bridge1.JPG" style='height: 100%; width: 100%; object-fit: contain'/>
+                                </div>
+            
+                                <div class = "mySlides1 fade">
+                                    <img src = "websiteAssets/bridge2.JPG" style='height: 100%; width: 100%; object-fit: contain'/>
+                                </div>
+            
+                                <div class = "mySlides1 fade">
+                                    <img src = "websiteAssets/bridge3.JPG" style='height: 100%; width: 100%; object-fit: contain'/>
+                                </div>
+
+                                <div class = "mySlides1 fade">
+                                    <img src = "websiteAssets/bridge4.JPG" style='height: 100%; width: 100%; object-fit: contain'/>
+                                </div>
+                                
+                                
+                                <!-- buttons-->
+                                <a class="prev" onclick="plusSlides(-1,0)">&#10094;</a>
+                                <a class="next" onclick="plusSlides(1,0)">&#10095;</a>
+                                
+                            
+                            </div>
+                        </center>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left bottom_padding">
+                        <h2>Bayview Secondary School | Highschool</h2>
+                        <p>I completed the IB (International Baccelaurete) Program with a 41/45, and average of 98.7%.</p>
+                    </td>
+                    <td class="top_padding">                        
+                        <img src="websiteAssets/dp-programme-logo-en.png" style="width:300px; height: auto;">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+    <script>
+        var slideIndex = [1,1];
+        var slideId = ["mySlides1", "mySlides2"]
+        showSlides(1, 0);
+        showSlides(1, 1);
+
+        function plusSlides(n, no) {
+            showSlides(slideIndex[no] += n, no);
+        }
+
+        function showSlides(n, no) {
+            var i;
+            var x = document.getElementsByClassName(slideId[no]);
+            if (n > x.length) {slideIndex[no] = 1}    
+            if (n < 1) {slideIndex[no] = x.length}
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+            }
+            x[slideIndex[no]-1].style.display = "block";  
+        }
+    </script>
+</body>
+
+
+
+</html>
