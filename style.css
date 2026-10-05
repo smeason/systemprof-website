@@ -164,7 +164,7 @@ h1 {
     background-size:cover;
     background-position-y: 50%;
     background-position-x: center;
-    background-image: linear-gradient(to top, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.801) 10%, rgba(255, 255, 255, 0) 30%), url("websiteAssets/portrait3-1.jpg");
+    background-image: linear-gradient(to top, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.801) 10%, rgba(255, 255, 255, 0) 30%), url("websiteAssets/selfpics/portrait3-1.jpg");
 }
 
 .profile_card p {
@@ -234,7 +234,7 @@ p {
     width:100px;
     height:100px;
     border-radius: 50%;
-    background-image: url(websiteAssets/ID_photo.jpg);
+    background-image: url(websiteAssets/selfpics/ID_photo.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -327,7 +327,7 @@ p {
     background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
 }
 
-.mySlides1, .mySlides2{
+.mySlides1, .mySlides2, .mySlides3, .mySlides4, .mySlides5{
     display: none;
 }
 
@@ -455,7 +455,7 @@ td {
     height: 100%;
     background-position: center;
     background-size: cover;
-    background-image: url("websiteAssets/digital1.png");
+    background-image: url("websiteAssets/art/digital1.png");
     transition: 0.4s ease
 }
 
@@ -478,7 +478,7 @@ td {
     height: 100%;
     background-position: center;
     background-size: cover;
-    background-image: url("websiteAssets/digital2.png");
+    background-image: url("websiteAssets/art/digital2.png");
     transition: 0.4s ease
 }
 
@@ -503,7 +503,7 @@ td {
     height: 100%;
     background-position: center;
     background-size: cover;
-    background-image: url("websiteAssets/digital3.png");
+    background-image: url("websiteAssets/art/digital3.png");
     transition: 0.4s ease
 }
 
@@ -526,7 +526,7 @@ td {
     height: 100%;
     background-position: center;
     background-size: cover;
-    background-image: url("websiteAssets/digital4.png");
+    background-image: url("websiteAssets/art/digital4.png");
     transition: 0.4s ease
 }
 
@@ -550,7 +550,7 @@ td {
     height: 100%;
     background-position: center;
     background-size: cover;
-    background-image: url("websiteAssets/digital5.png");
+    background-image: url("websiteAssets/art/digital5.png");
     transition: 0.4s ease
 }
 
@@ -574,7 +574,7 @@ td {
     height: 100%;
     background-position: center;
     background-size: cover;
-    background-image: url("websiteAssets/traditional1.png");
+    background-image: url("websiteAssets/art/traditional1.png");
     transition: 0.4s ease
 }
 
@@ -598,7 +598,7 @@ td {
     height: 100%;
     background-position: center;
     background-size: cover;
-    background-image: url("websiteAssets/traditional2.jpg");
+    background-image: url("websiteAssets/art/traditional2.jpg");
     transition: 0.4s ease
 }
 
@@ -622,7 +622,7 @@ td {
     height: 100%;
     background-position: center;
     background-size: cover;
-    background-image: url("websiteAssets/traditional3.jpg");
+    background-image: url("websiteAssets/art/traditional3.jpg");
     transition: 0.4s ease
 }
 
@@ -646,7 +646,7 @@ td {
     height: 100%;
     background-position: center;
     background-size: cover;
-    background-image: url("websiteAssets/traditional4.jpg");
+    background-image: url("websiteAssets/art/traditional4.jpg");
     transition: 0.4s ease
 }
 
@@ -670,7 +670,7 @@ td {
     height: 100%;
     background-position: center;
     background-size: cover;
-    background-image: url("websiteAssets/traditional5.jpg");
+    background-image: url("websiteAssets/art/traditional5.jpg");
     transition: 0.4s ease
 }
 
@@ -693,7 +693,7 @@ td {
     height: 100%;
     background-position: center;
     background-size: cover;
-    background-image: url("websiteAssets/traditional6.jpg");
+    background-image: url("websiteAssets/art/traditional6.jpg");
     transition: 0.4s ease
 }
 
@@ -715,7 +715,7 @@ td {
     height: 100%;
     background-position: center;
     background-size: cover;
-    background-image: url("websiteAssets/traditional7.jpg");
+    background-image: url("websiteAssets/art/traditional7.jpg");
     transition: 0.4s ease
 }
 
@@ -737,7 +737,7 @@ td {
     height: 100%;
     background-position: center;
     background-size: cover;
-    background-image: url("websiteAssets/painting1.png");
+    background-image: url("websiteAssets/art/painting1.png");
     transition: 0.4s ease
 }
 
@@ -759,7 +759,7 @@ td {
     height: 100%;
     background-position: center;
     background-size: cover;
-    background-image: url("websiteAssets/painting2.png");
+    background-image: url("websiteAssets/art/painting2.png");
     transition: 0.4s ease
 }
 
@@ -781,7 +781,7 @@ td {
     height: 100%;
     background-position: center;
     background-size: cover;
-    background-image: url("websiteAssets/painting3.jpg");
+    background-image: url("websiteAssets/art/painting3.jpg");
     transition: 0.4s ease
 }
 
@@ -803,7 +803,7 @@ td {
     height: 100%;
     background-position: center;
     background-size: cover;
-    background-image: url("websiteAssets/painting4.jpg");
+    background-image: url("websiteAssets/art/painting4.jpg");
     transition: 0.4s ease
 }
 
