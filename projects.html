@@ -1,6 +1,7 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Samson's Home page</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,19 +18,18 @@
                 <div class="profile_picture"></div>
 
                 <ul>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="index.shtml">Home</a></li>
                     <li><a href="projects.html">Projects</a></li>
-                    <li><a href="professional.html">Professional</a></li>
                     <li><a href="art.html">Art</a></li>
                     <li><a href="hobbies.html">Hobbies</a></li>
                     <li><a href="academics.html">Academics</a></li>
-                    <li><a href="project_archive.html">Archive</a></li>
+                    <!-- <li><a href="project_archive.html">Archive</a></li> -->
                 </ul>
 
                 <h3 class="footer">
-                    <br><b>Email</b><br><a href="mailto:samsonsongwu@gmail.com">samsonsongwu@gmail.com</a><br>
+                    <br><b>Email</b><br><a>samsonsongwu [at] gmail [.] com</a><br>
                     <br>Github<br><a href="https://github.com/smeason">smeason</a><br>
-                    <br><b>Resume</b><br><a href="websiteAssets\documents\Samson_Resume_2026">October 2026</a><br>
+                    <br><b>Resume</b><br><a href="websiteAssets/documents/Samson_Resume_2026.pdf">October 2026</a><br>
                     <br>Website made by Samson Wu<br>
                 </h3>
             </div>
@@ -39,19 +39,22 @@
             <!--<div class="info">-->
                 <h1 class="big" style="padding-bottom:50px;">Projects</h1>
 
-                <table>
-                    <tr>
+                <table class="project-list">
+                    <tr style="background-color: rgb(255, 225, 214);">
                         <td class="left">
-                            <h2>Thesis</h2>
+                            <h2>Thesis<small class="project-date"><time datetime="2025-09">Sept 2025</time> &ndash; <time datetime="2026-04">Apr 2026</time></small></h2>
                             <div>
                                 <p>
-                                    
+                                    Created an autonomous robot for dishwasher loading and unloading.
+                                    Uses RGB-D on robot to localize, reason about rack, and grasp or load.
+                                    Designed and implemented full pipelines for autonomy. See paper for more details.
 
-
-                                    <br><a href="websiteAssets/thesis/Final_Report.pdf">Report (pdf)</a><br>
-                                    <br><a href="https://smeason.github.io/thesis-dishwasher-load-unload/">Website</a><br>
-                                    <br><a href="https://github.com/smeason/robocasa/tree/thesis-custom">Code (Part 1)</a><br>
-                                    <br><a href="https://github.com/smeason/Thesis-robot">Code (Part 2)</a><br>
+                                    <span class="project-links">
+                                        <a href="websiteAssets/thesis/Final_Report.pdf">Paper (pdf)</a>
+                                        <a href="https://smeason.github.io/thesis-dishwasher-load-unload/">Website</a>
+                                        <a href="https://github.com/smeason/robocasa/tree/thesis-custom">Code (Part 1)</a>
+                                        <a href="https://github.com/smeason/Thesis-robot">Code (Part 2)</a>
+                                    </span>
 
                                 </p>
                             </div>
@@ -61,32 +64,140 @@
                             <div class = "slideshow-container" style="margin-right: 50px;">
                                 <center>
 
-                                <div class = "mySlides3 fade">
-                                    <img src = "websiteAssets\thesis\FigRobotEnvironmentandObjects.png" style='height: 100%; width: 100%; object-fit: contain'/>
+                                <div class="slide fade">
+                                    <img src = "websiteAssets/optimized/thesis/FigRobotEnvironmentandObjects.webp" style='height: 100%; width: 100%; object-fit: contain' loading="eager" fetchpriority="high" decoding="async">
                                 </div>
-                                <div class = "mySlides3 fade">
-                                    <img src = "websiteAssets\thesis\DishwasherPickingPipeline.png" style='height: 100%; width: 100%; object-fit: contain'/>
+                                <div class="slide fade">
+                                    <img src = "websiteAssets/optimized/thesis/DishwasherPickingPipeline.webp" style='height: 100%; width: 100%; object-fit: contain' loading="lazy" decoding="async">
                                 </div>
-                                <div class = "mySlides3 fade">
-                                    <img src = "websiteAssets\thesis\DirectPoseRegressionPipeline.png" style='height: 100%; width: 100%; object-fit: contain'/>
+                                <div class="slide fade">
+                                    <img src = "websiteAssets/optimized/thesis/DirectPoseRegressionPipeline.webp" style='height: 100%; width: 100%; object-fit: contain' loading="lazy" decoding="async">
                                 </div>
-                                <div class = "mySlides3 fade">
-                                    <img src = "websiteAssets\thesis\PointNetDishwasherLoading.png" style='height: 100%; width: 100%; object-fit: contain'/>
+                                <div class="slide fade">
+                                    <img src = "websiteAssets/optimized/thesis/PointNetDishwasherLoading.webp" style='height: 100%; width: 100%; object-fit: contain' loading="lazy" decoding="async">
                                 </div>
                                 </center>
                                 <!-- buttons-->
-                                <a class="prev" onclick="plusSlides(-1,1)">&#10094;</a>
-                                <a class="next" onclick="plusSlides(1,1)">&#10095;</a>
+                                <button type="button" class="prev" data-slide-step="-1" aria-label="Previous image">&#10094;</button>
+                                <button type="button" class="next" data-slide-step="1" aria-label="Next image">&#10095;</button>
 
                             </div>
 
                         </td>
                     </tr>
 
+                    <tr>
+                        <td class="left">
+                            <h2>Capstone<small class="project-date"><time datetime="2025-10">Oct 2025</time> &ndash; <time datetime="2025-12">Dec 2025</time></small></h2>
+                            <div>
+                                <p>
+                                    For my capstone, I worked in a team in the health industry to
+                                    develop a contactless system that estimates biomarkers, including
+                                    blood pressure, blood oxygen saturation, and BMI from facial video.
+                                    We researched, gathered data, and evaluated different ML models on
+                                    this task. I did the blood oxygen saturation (SpO2) prediction
+                                    using a method which converts facial regions to spatio-temporal maps,
+                                    separates AC and DC signals, and uses a dual-stream ResNet model for
+                                    estimation. The idea was to use the steady-state and periodic signals
+                                    to find insights into the blood flow and in turn the blood oxygen.
+
+
+                                    <span class="project-links">
+                                        <a href="websiteAssets/capstone/Copy of Final Report.pdf">Paper (pdf)</a>
+                                        <!-- <a href="websiteAssets/capstone/Group2_Presentation.pdf">Presentation</a> -->
+                                        <a href="https://github.com/smeason/MIE429-SpO2-Prediction">Code</a>
+                                    </span>
+
+                                </p>
+                            </div>
+
+                        </td>
+                        <td class="top_padding">
+                            <div class = "slideshow-container" style="margin-right: 50px;">
+                                <center>
+
+                                <div class="slide fade">
+                                    <img src = "websiteAssets/optimized/capstone/Spo2_1.webp" style='height: 100%; width: 100%; object-fit: contain' loading="lazy" decoding="async">
+                                </div>
+                                <div class="slide fade">
+                                    <img src = "websiteAssets/optimized/capstone/Spo2_2.webp" style='height: 100%; width: 100%; object-fit: contain' loading="lazy" decoding="async">
+                                </div>
+                                <div class="slide fade">
+                                    <img src = "websiteAssets/optimized/capstone/Spo2_3.webp" style='height: 100%; width: 100%; object-fit: contain' loading="lazy" decoding="async">
+                                </div>
+                                <div class="slide fade">
+                                    <img src = "websiteAssets/optimized/capstone/Spo2_4.webp" style='height: 100%; width: 100%; object-fit: contain' loading="lazy" decoding="async">
+                                </div>
+                                <div class="slide fade">
+                                    <img src = "websiteAssets/optimized/capstone/Spo2_5.webp" style='height: 100%; width: 100%; object-fit: contain' loading="lazy" decoding="async">
+                                </div>
+                                <div class="slide fade">
+                                    <img src = "websiteAssets/optimized/capstone/Spo2_6.webp" style='height: 100%; width: 100%; object-fit: contain' loading="lazy" decoding="async">
+                                </div>
+                                <div class="slide fade">
+                                    <img src = "websiteAssets/optimized/capstone/Spo2_7.webp" style='height: 100%; width: 100%; object-fit: contain' loading="lazy" decoding="async">
+                                </div>
+                                <div class="slide fade">
+                                    <img src = "websiteAssets/optimized/capstone/Spo2_8.webp" style='height: 100%; width: 100%; object-fit: contain' loading="lazy" decoding="async">
+                                </div>
+                                </center>
+                                <!-- buttons-->
+                                <button type="button" class="prev" data-slide-step="-1" aria-label="Previous image">&#10094;</button>
+                                <button type="button" class="next" data-slide-step="1" aria-label="Next image">&#10095;</button>
+
+                            </div>
+
+                        </td>
+                    </tr>
+
+                    <tr style="background-color: rgb(255, 225, 214);">
+                        <td class="left">
+                            <h2>Generating Animal Hybrids Using Adversarial Autoencoders<small class="project-date"><time datetime="2024-02">Feb 2024</time> &ndash; <time datetime="2024-04">Apr 2024</time></small></h2>
+                            <div>
+                                <p>
+                                    Developed and evaluated deep learning models for generating realistic animal hybrids 
+                                    through latent-space image interpolation. Using the AFHQ animal-face dataset,
+                                    we reproduced ACAI and implemented an improved AEAI architecture combining 
+                                    autoencoders with adversarial training, LPIPS reconstruction, and 
+                                    cycle-consistency losses. AEAI consistently produced sharper, more realistic 
+                                    hybrids than ACAI, achieving substantially lower FID scores on both training 
+                                    and validation data. Training was difficult due to instability of the actor-critic
+                                    architecture, often resulting in mode collapse. This was mitigated with weight clipping.
+
+                                    <span class="project-links">
+                                        <a href="websiteAssets/AnimalHybridProject/Final Report.pdf">Paper (pdf)</a>
+                                        <a href="websiteAssets/AnimalHybridProject/Andy_Cai_Samson_Wu_Yishan_Li_Preliminary_Report.pdf">Preliminary Report (pdf)</a>
+                                        <a href="https://github.com/smeason/ECE324_FinalProject">Code</a>
+                                    </span>
+
+                                </p>
+                            </div>
+
+                        </td>
+                        <td class="top_padding">
+                            <div class = "slideshow-container" style="margin-right: 50px;">
+                                <center>
+
+                                <div class="slide fade">
+                                    <img src = "websiteAssets/optimized/AnimalHybridProject/test_good.webp" style='height: 100%; width: 100%; object-fit: contain' loading="lazy" decoding="async">
+                                </div>
+                                <div class="slide fade">
+                                    <img src = "websiteAssets/optimized/AnimalHybridProject/test_pose.webp" style='height: 100%; width: 100%; object-fit: contain' loading="lazy" decoding="async">
+                                </div>
+
+                                </center>
+                                <!-- buttons-->
+                                <button type="button" class="prev" data-slide-step="-1" aria-label="Previous image">&#10094;</button>
+                                <button type="button" class="next" data-slide-step="1" aria-label="Next image">&#10095;</button>
+
+                            </div>
+
+                        </td>
+                    </tr>
 
                     <tr>
                         <td class="left">
-                            <h2>U of T Summer Camp</h2>
+                            <h2>U of T Summer Camp<small class="project-date"><time datetime="2019">2019</time></small></h2>
                             <div>
                                 <p>Led my group in the "Design, Build, Battle" summer DEEP
                                     Program at U of T (2019). The goal was to make a robot to pick up and transport wooden cubes.
@@ -102,148 +213,130 @@
                             <div class = "slideshow-container" style="margin-right: 50px;">
                                 <center>
 
-                                <div class = "mySlides2 fade">
-                                    <img src = "websiteAssets\robotics\robot7.png" style='height: 100%; width: 100%; object-fit: contain'/>
+                                <div class="slide fade">
+                                    <img src = "websiteAssets/optimized/robotics/robot7.webp" style='height: 100%; width: 100%; object-fit: contain' loading="lazy" decoding="async">
                                 </div>
 
-                                <div class = "mySlides2 fade">
-                                    <img src = "websiteAssets\robotics\robot6.jpg" style='height: 100%; width: 100%; object-fit: contain'/>
+                                <div class="slide fade">
+                                    <img src = "websiteAssets/optimized/robotics/robot6.webp" style='height: 100%; width: 100%; object-fit: contain' loading="lazy" decoding="async">
                                 </div>
 
-                                <div class = "mySlides2 fade">
-                                    <img src = "websiteAssets\robotics\robot8.jpg" style='height: 100%; width: 100%; object-fit: contain'/>
+                                <div class="slide fade">
+                                    <img src = "websiteAssets/optimized/robotics/robot8.webp" style='height: 100%; width: 100%; object-fit: contain' loading="lazy" decoding="async">
                                 </div>
 
-                                <div class = "mySlides2 fade">
-                                    <img src = "websiteAssets/robotics/summer camp robot cad1.PNG" style='height: 100%; width: 100%; object-fit: contain'/>
+                                <div class="slide fade">
+                                    <img src = "websiteAssets/optimized/robotics/summer camp robot cad1.webp" style='height: 100%; width: 100%; object-fit: contain' loading="lazy" decoding="async">
                                 </div>
                                 </center>
                                 <!-- buttons-->
-                                <a class="prev" onclick="plusSlides(-1,1)">&#10094;</a>
-                                <a class="next" onclick="plusSlides(1,1)">&#10095;</a>
+                                <button type="button" class="prev" data-slide-step="-1" aria-label="Previous image">&#10094;</button>
+                                <button type="button" class="next" data-slide-step="1" aria-label="Next image">&#10095;</button>
 
                             </div>
 
                         </td>
                     </tr>
                     <tr style="background-color: rgb(255, 225, 214);">
-                        <td colspan="2">
-                            <h2>FLL 2014 (Falconators)</h2>
-                            <p>I was a leader in the robotics department for the 2014 FLL competition. There were many different tasks which needed
-                                different types of arms and motor setups to accomplish. After each mini-run, we would switch out different arms/attachments for the next run.
-                                The preperation involved intensive testing and adjustments to program the robot to complete the missions as reliably as possible.
-                            <br><br>Our team recieved the Research award.</p>
-                    <tr style="background-color: rgb(255, 225, 214);">
-                        <td colspan="2">
-
-                            <!--float:left; margin-bottom:50px;-->
-                            <!-- <div> -->
-                            <center>
-                                <div class = "slideshow-container" style="display:block; margin-bottom:50px;">
-                                    <div class = "mySlides1 fade">
-                                        <img src = "websiteAssets\robotics/robot1.jpg" style='height: 100%; width: 100%; object-fit: contain'/>
-                                    </div>
-                                    <div class = "mySlides1 fade">
-                                        <img src = "websiteAssets\robotics/robot2.png" style='height: 100%; width: 100%; object-fit: contain'/>
-                                    </div>
-                                    <div class = "mySlides1 fade">
-                                        <img src = "websiteAssets\robotics/robot3.png" style='height: 100%; width: 100%; object-fit: contain'/>
-                                    </div>
-                                    <div class = "mySlides1 fade">
-                                        <img src = "websiteAssets\robotics/robot11.jpg" style='height: 100%; width: 100%; object-fit: contain'/>
-                                    </div>
-                                    <div class = "mySlides1 fade">
-                                        <img src = "websiteAssets\robotics/robot12.jpg" style='height: 100%; width: 100%; object-fit: contain'/>
-                                    </div>
-                                    <!-- buttons-->
-                                    <a class="prev" onclick="plusSlides(-1,0)">&#10094;</a>
-                                    <a class="next" onclick="plusSlides(1,0)">&#10095;</a>
-
-
-                                </div>
-                            </center>
-
-                        </td>
-                    <tr style="background-color: rgb(255, 225, 214);">
-                        <td colspan="2">
-                            <center>
-
-                            <iframe style="display:block; margin-bottom:50px;" width="600" height="400" src="https://www.youtube.com/embed/s_NXk1nu3BA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </center>
-                        </td>
-                    </tr>
-                    <tr>
                         <td class="left bottom_padding">
-                            <h2>Silver Stream Robotics</h2>
+                            <h2>Silver Stream Robotics<small class="project-date"><time datetime="2016">2016</time></small></h2>
                             <p>Captain of the Silver Stream Robotics Team achieving 2nd in
                                 the York Region Competition in 2016. The robot was made using Lego EV3 and was designed to put balls into boxes with the help of a line follower.</p>
 
                             <center>
-                                <img src = "websiteAssets/robotics/robot5.png" width=auto height="250"/>
+                                <img src = "websiteAssets/optimized/robotics/robot5.webp" width=auto height="250" loading="lazy" decoding="async">
                             </center>
                         </td>
                         <td class="top_padding">
 
-                                <img src = "websiteAssets/robotics/robot9.JPG" width=600 height=auto style="margin-right:5%;"/>
+                                <img src = "websiteAssets/optimized/robotics/robot9.webp" width=600 height=auto style="margin-right:5%;" loading="lazy" decoding="async">
 
                         </td>
                     </tr>
-                    <tr style="background-color: rgb(255, 225, 214);">
+                    <tr>
                         <td class="left">
-                            <h2>FLL 2015 (Metal Talons)</h2>
+                            <h2>FLL 2015 (Metal Talons)<small class="project-date"><time datetime="2015">2015</time></small></h2>
                             <p>I also led my team in the robotics department for the 2015 competition. It was a similar process to the 2014
                                 competition, but we implemented new strategies we learned from the previous year.
                             </p>
                         </td>
                         <td class="top_padding">
-                            <img src = "websiteAssets/robotics/robot10.JPG" width="600" height=auto style="margin-right:5%;"/>
+                            <img src = "websiteAssets/optimized/robotics/robot10.webp" width="600" height=auto style="margin-right:5%;" loading="lazy" decoding="async">
                         </td>
                     </tr>
                     <tr style="background-color: rgb(255, 225, 214);">
+                        <td colspan="2">
+                            <h2>FLL 2014 (Falconators)<small class="project-date"><time datetime="2014">2014</time></small></h2>
+                            <p>I was a leader in the robotics department for the 2014 FLL competition. There were many different tasks which needed
+                                different types of arms and motor setups to accomplish. After each mini-run, we would switch out different arms/attachments for the next run.
+                                The preperation involved intensive testing and adjustments to program the robot to complete the missions as reliably as possible.
+                            <br><br>Our team recieved the Research award.</p>
+                        </td>
+                    </tr>
+                    <tr style="background-color: rgb(255, 225, 214);">
+                        <td colspan="2">
+                            <center>
+                                <div class="slideshow-container" style="display:block; margin-bottom:50px;">
+                                    <div class="slide fade">
+                                        <img src="websiteAssets/optimized/robotics/robot1.webp" style="height: 100%; width: 100%; object-fit: contain" loading="lazy" decoding="async">
+                                    </div>
+                                    <div class="slide fade">
+                                        <img src="websiteAssets/optimized/robotics/robot2.webp" style="height: 100%; width: 100%; object-fit: contain" loading="lazy" decoding="async">
+                                    </div>
+                                    <div class="slide fade">
+                                        <img src="websiteAssets/optimized/robotics/robot3.webp" style="height: 100%; width: 100%; object-fit: contain" loading="lazy" decoding="async">
+                                    </div>
+                                    <div class="slide fade">
+                                        <img src="websiteAssets/optimized/robotics/robot11.webp" style="height: 100%; width: 100%; object-fit: contain" loading="lazy" decoding="async">
+                                    </div>
+                                    <div class="slide fade">
+                                        <img src="websiteAssets/optimized/robotics/robot12.webp" style="height: 100%; width: 100%; object-fit: contain" loading="lazy" decoding="async">
+                                    </div>
+                                    <button type="button" class="prev" data-slide-step="-1" aria-label="Previous image">&#10094;</button>
+                                    <button type="button" class="next" data-slide-step="1" aria-label="Next image">&#10095;</button>
+                                </div>
+                            </center>
+                        </td>
+                    </tr>
+                    <tr style="background-color: rgb(255, 225, 214);">
+                        <td colspan="2">
+                            <center>
+                                <iframe loading="lazy" style="display:block; margin-bottom:50px;" width="600" height="400" src="https://www.youtube.com/embed/s_NXk1nu3BA" title="YouTube video player" referrerpolicy="strict-origin-when-cross-origin" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </center>
+                        </td>
+                    </tr>
+                    <tr>
                         <td class="left">
-                            <h2>Rubik's Cube Solving Robot</h2>
+                            <h2>Rubik's Cube Solving Robot<small class="project-date"><time datetime="2013">2013</time></small></h2>
                             <p>Built in 2013 following a tutorial. It solves a rubik's cube in less than 2 minutes
                                 using the left arm to flip the cube or hold it in place, and the bottom turntable to make the moves.
                                 The rubik's cube is scanned using an rbg sensor on the right arm to then calculate for the optimal moves.
                             </p>
                         </td>
                         <td class="top_padding">
-                            <!-- <img src = "websiteAssets\robot4.jpg" width=600 height=auto style="margin-right:5%;"/> -->
-                            <iframe width="600" height="337" src="https://www.youtube.com/embed/JsRbkiMnRgI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            
+                            <iframe loading="lazy" width="600" height="337" src="https://www.youtube.com/embed/JsRbkiMnRgI" title="YouTube video player" referrerpolicy="strict-origin-when-cross-origin" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </td>
+                    </tr>
+                    <tr style="background-color: rgb(255, 225, 214);">
+                        <td colspan="2" class="boggle-project">
+                            <h2>Boggle</h2>
+                            <p>The classic Boggle game where you find words in a 5x5 grid of letters. Made with Java, playable with 1 to 2 players.
+                            </p>
+                            <div class="boggle-gallery">
+                                <img src="websiteAssets/optimized/boggle1.webp" alt="Boggle game board" loading="eager" fetchpriority="high" decoding="async">
+                                <img src="websiteAssets/optimized/boggle2.webp" alt="Boggle game interface" loading="lazy" decoding="async">
+                            </div>
+                            <iframe loading="lazy" src="https://www.youtube.com/embed/3e6czqMayYc?start=6" title="Boggle gameplay video" referrerpolicy="strict-origin-when-cross-origin" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </td>
                     </tr>
                 </table>
-
-
-
-
 
             <!--</div>-->
         </div>
     </div>
 
-    <script>
-        var slideIndex = [1,1,1];
-        var slideId = ["mySlides1", "mySlides2", "mySlides3"]
-        showSlides(1, 0);
-        showSlides(1, 1);
-        showSlides(1, 2);
-
-        function plusSlides(n, no) {
-            showSlides(slideIndex[no] += n, no);
-        }
-
-        function showSlides(n, no) {
-            var i;
-            var x = document.getElementsByClassName(slideId[no]);
-            if (n > x.length) {slideIndex[no] = 1}
-            if (n < 1) {slideIndex[no] = x.length}
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            x[slideIndex[no]-1].style.display = "block";
-        }
-    </script>
+    <script src="main.js" defer></script>
 
 </body>
 

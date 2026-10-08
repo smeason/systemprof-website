@@ -1,34 +1,37 @@
-var slideIndex = 1;
-showSlides(slideIndex);
+document.querySelectorAll(".slideshow-container").forEach((slideshow) => {
+    const slides = Array.from(slideshow.querySelectorAll(".slide"));
+    const controls = slideshow.querySelectorAll("[data-slide-step]");
+    const indicators = slideshow.querySelectorAll("[data-slide-index]");
 
-// next and previous control
-function plusSlides(n) {
-    showSlides(slideIndex += n)
-}
+    if (slides.length === 0) return;
 
-function currentSlide(n) {
-    showSlides(slideIndex = n)
-}
+    let activeIndex = 0;
 
-function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
+    const showSlide = (index) => {
+        activeIndex = (index + slides.length) % slides.length;
 
-    if(n > slides.length) {slideIndex = 1;}
-    if (n < 1) {slideIndex = slides.length;}
+        slides.forEach((slide, slideIndex) => {
+            slide.hidden = slideIndex !== activeIndex;
+        });
 
-    for (i = 0; i < slides.length; i++){
-        slides[i].style.display = "none";
-    }
-    
-    for (i = 0; i < dots.length; i++){
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
-}
+        indicators.forEach((indicator, slideIndex) => {
+            const isActive = slideIndex === activeIndex;
+            indicator.classList.toggle("active", isActive);
+            indicator.setAttribute("aria-pressed", String(isActive));
+        });
+    };
 
-function zoom(image){
-    
-}
+    controls.forEach((control) => {
+        control.addEventListener("click", () => {
+            showSlide(activeIndex + Number(control.dataset.slideStep));
+        });
+    });
+
+    indicators.forEach((indicator) => {
+        indicator.addEventListener("click", () => {
+            showSlide(Number(indicator.dataset.slideIndex));
+        });
+    });
+
+    showSlide(activeIndex);
+});

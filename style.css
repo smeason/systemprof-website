@@ -28,6 +28,7 @@ time, mark, audio, video {
 
 body {
     line-height:1;
+    font-family: Georgia, "Times New Roman", serif;
 }
 
 article,aside,details,figcaption,figure,
@@ -108,6 +109,18 @@ input, select {
     min-width: 250px;
 }
 
+.project-list .left {
+    width: 400px;
+    max-width: 400px;
+    min-width: 400px;
+}
+
+.main_content .project-list {
+    width: calc(100vw - 240px);
+    min-width: 1000px;
+    table-layout: fixed;
+}
+
 .column {
     float: left;
     width:50%;
@@ -118,6 +131,49 @@ h2 {
     color:black;
     font-size: 30px;
     font-family: 'Roboto', sans-serif;
+}
+
+.project-date {
+    display: block;
+    margin-top: 6px;
+    color: #666;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.project-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    max-width: 100%;
+    padding: 10px 16px;
+    border-radius: 999px;
+    background: #F8767D;
+    color: #292020;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.15s ease;
+}
+
+.project-links a:hover {
+    background: #ef626b;
+}
+
+.project-links a:focus-visible {
+    outline: 3px solid #292020;
+    outline-offset: 3px;
 }
 
 .big {
@@ -164,7 +220,7 @@ h1 {
     background-size:cover;
     background-position-y: 50%;
     background-position-x: center;
-    background-image: linear-gradient(to top, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.801) 10%, rgba(255, 255, 255, 0) 30%), url("websiteAssets/selfpics/portrait3-1.jpg");
+    background-image: linear-gradient(to top, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.801) 10%, rgba(255, 255, 255, 0) 30%), url("websiteAssets/selfpics/boston2.webp");
 }
 
 .profile_card p {
@@ -193,7 +249,6 @@ h3 {
 
 p {
     font-size: 18px;
-    font-family: 'HelveticaNeue-Light', Helvetica, sans-serif;
     
     margin-top: 10px;
     margin-bottom: 10px;
@@ -220,10 +275,12 @@ p {
 }
 
 .footer {
-    position: fixed;
+    position: absolute;
     bottom: 30px;
-    /* text-align: center; */
-    margin-left:1em;
+    left: 0;
+    right: 0;
+    margin: 0;
+    text-align: center;
 }
 
 .robotics {
@@ -234,7 +291,7 @@ p {
     width:100px;
     height:100px;
     border-radius: 50%;
-    background-image: url(websiteAssets/selfpics/ID_photo.jpg);
+    background-image: url(websiteAssets/optimized/selfpics/ID_photo.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -308,7 +365,7 @@ p {
 .wrapper .main_content .info{
     margin-left:60px;
     margin-top: 20px;
-    color:#717171;
+    color:#000;
     line-height: 25px;
 }
 
@@ -327,10 +384,6 @@ p {
     background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
 }
 
-.mySlides1, .mySlides2, .mySlides3, .mySlides4, .mySlides5{
-    display: none;
-}
-
 .slideshow-container {
     width: 600px;
     height: 400px;
@@ -347,7 +400,7 @@ td {
 
 .main_content p {
     padding: 20px 10px 10px 60px;
-    max-width: 1200px;
+    max-width: 900px;
 }
 
 .main_content h1 {
@@ -356,11 +409,34 @@ td {
 
 .main_content table p {
     padding: 20px 10px 10px 60px;
-    max-width: 1200px;
+    max-width: 900px;
 }
 
 .main_content table h2 {
     padding: 30px 10px 0px 60px;
+}
+
+.boggle-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    padding: 0 16px;
+}
+
+.boggle-gallery img {
+    display: block;
+    width: min(100%, 500px);
+    height: auto;
+    object-fit: contain;
+}
+
+.boggle-project iframe {
+    display: block;
+    width: min(560px, calc(100% - 32px));
+    height: auto;
+    aspect-ratio: 16 / 9;
+    margin: 24px auto 50px;
 }
 
 .coding_margin img {
@@ -380,6 +456,10 @@ td {
     transition: 0.6s ease;
     border-radius: 0 9px 9px 0;
     user-select: none;
+    border: 0;
+    background: transparent;
+    font-family: inherit;
+    line-height: 1;
 }
 
 .prev {
@@ -395,6 +475,11 @@ td {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
+.prev:focus-visible, .next:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 2px;
+}
+
 .dot {
     cursor: pointer;
     height: 15px;
@@ -403,6 +488,8 @@ td {
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
+    padding: 0;
+    border: 0;
     transition: background-color 0.6s ease;
 }
 
@@ -428,393 +515,216 @@ td {
     to {opacity: 1}
 }
 
-/*IMAGES FOR ART PAGE*/
+img, iframe, video {
+    max-width: 100%;
+}
 
+/* Art gallery */
 .container-wide {
-    width: 400px;
+    flex: 0 1 400px;
+    width: min(100%, 400px);
     height: 230px;
-    object-fit: fill;
     overflow: hidden;
     padding: 10px;
 }
 
+.container-wide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.container-wide img:hover {
+    transform: scale(1.1);
+}
+
 .container-wide:active {
-    width:800px;
-    height:500px;
-    
-    transform-origin: top left;
+    width: min(800px, 100%);
+    height: min(500px, 65vh);
+}
+
+.container-wide:active img {
     transform: scale(1);
-    transition: 0.5s ease;
+    object-fit: contain;
+    background: #000;
 }
 
+@media (max-width: 900px) {
+    .wrapper {
+        display: block;
+    }
 
+    .wrapper .sidebar {
+        position: static;
+        width: 100%;
+        height: auto;
+        padding: 16px;
+    }
 
-/* image 1 */
-.image1 {
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-size: cover;
-    background-image: url("websiteAssets/art/digital1.png");
-    transition: 0.4s ease
+    .wrapper .sidebar h2 {
+        margin-bottom: 8px;
+    }
+
+    .profile_picture {
+        width: 72px;
+        height: 72px;
+        margin: 0 auto 8px;
+    }
+
+    .wrapper .sidebar ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        list-style: none;
+    }
+
+    .wrapper .sidebar ul li {
+        padding: 8px 10px;
+        border: 0;
+    }
+
+    .wrapper .main_content {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .footer {
+        position: static;
+        margin: 8px auto 0;
+        padding: 0;
+    }
+
+    .main_content .info {
+        margin: 20px 16px 0;
+    }
+
+    .main_content p,
+    .main_content table p {
+        max-width: none;
+        margin-right: 0;
+        padding: 12px 16px;
+        text-align: left;
+    }
+
+    .main_content h1,
+    .main_content table h2 {
+        padding: 20px 16px 0;
+    }
+
+    .main_content table,
+    .main_content tbody,
+    .main_content tr,
+    .main_content td {
+        display: block;
+        width: 100%;
+    }
+
+    .main_content td {
+        height: auto;
+        min-width: 0;
+        padding-inline: 0;
+    }
+
+    .main_content .project-list {
+        width: 100%;
+        min-width: 0;
+        table-layout: auto;
+    }
+
+    .main_content .project-list .left {
+        width: 100%;
+        max-width: none;
+        min-width: 0;
+    }
+
+    .left {
+        max-width: none;
+        min-width: 0;
+    }
+
+    .wrapper + p {
+        margin: 16px !important;
+    }
+
+    .main_content_art {
+        width: 100%;
+        margin: 0 !important;
+        justify-content: center;
+    }
+
+    .profile_card {
+        display: flex;
+        align-items: flex-end;
+        width: min(500px, calc(100% - 32px));
+        height: auto;
+        aspect-ratio: 50 / 29;
+        margin: 0 auto !important;
+    }
+
+    .profile_card p {
+        position: static;
+        top: auto;
+        left: auto;
+        margin: 0;
+        padding: 0 12px 12px !important;
+        font-size: clamp(2rem, 9vw, 3.5rem);
+        text-align: left;
+        transform: none;
+    }
+
+    .slideshow-container > center,
+    .slideshow-container .slide {
+        height: 100%;
+    }
+
+    .slideshow-container {
+        width: min(100%, 600px);
+        height: clamp(220px, 66.67vw, 400px);
+        margin-inline: auto !important;
+    }
+
+    .main_content img,
+    .main_content iframe,
+    .main_content video {
+        max-width: 100%;
+    }
+
+    .main_content iframe {
+        width: min(100%, 600px) !important;
+        height: auto !important;
+        aspect-ratio: 16 / 9;
+    }
+
+    .main_content video {
+        width: min(100%, 600px) !important;
+        height: auto !important;
+        aspect-ratio: 16 / 9;
+    }
+
+    .coding_margin img {
+        width: auto !important;
+        height: auto !important;
+        max-width: calc(100% - 32px);
+        margin-left: 16px !important;
+    }
+
+    .main_content_art .container-wide {
+        flex-basis: min(100%, 400px);
+    }
 }
 
-.image1:hover {
-    transform: scale(1.1)    
-}
-
-.container-wide:active .image1 {
-    transform: scale(1);
-    background-size: contain;
-    background-repeat: no-repeat;
-    transition: 0.5s;
-    background-color:#000;
-}
-
-/* image 2 */
-
-.image2 {
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-size: cover;
-    background-image: url("websiteAssets/art/digital2.png");
-    transition: 0.4s ease
-}
-
-.image2:hover {
-    transform: scale(1.1)    
-}
-
-.container-wide:active .image2 {
-    transform: scale(1);
-    background-size: contain;
-    background-repeat: no-repeat;
-    transition: 0.5s;
-    background-color:#000;
-}
-
-
-
-/* image 3 */
-
-.image3 {
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-size: cover;
-    background-image: url("websiteAssets/art/digital3.png");
-    transition: 0.4s ease
-}
-
-.image3:hover {
-    transform: scale(1.1)    
-}
-
-.container-wide:active .image3 {
-    transform: scale(1);
-    background-size: contain;
-    background-repeat: no-repeat;
-    transition: 0.5s;
-    background-color:#000;
-}
-
-
-/* image 4 */
-.image4 {
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-size: cover;
-    background-image: url("websiteAssets/art/digital4.png");
-    transition: 0.4s ease
-}
-
-.image4:hover {
-    transform: scale(1.1)    
-}
-
-.container-wide:active .image4 {
-    transform: scale(1);
-    background-size: contain;
-    background-repeat: no-repeat;
-    transition: 0.5s;
-    background-color:#000;
-}
-
-
-
-
-.image5 {
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-size: cover;
-    background-image: url("websiteAssets/art/digital5.png");
-    transition: 0.4s ease
-}
-
-.image5:hover {
-    transform: scale(1.1)    
-}
-
-.container-wide:active .image5 {
-    transform: scale(1);
-    background-size: contain;
-    background-repeat: no-repeat;
-    transition: 0.5s;
-    background-color:#000;
-}
-
-
-
-
-.image6 {
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-size: cover;
-    background-image: url("websiteAssets/art/traditional1.png");
-    transition: 0.4s ease
-}
-
-.image6:hover {
-    transform: scale(1.1)    
-}
-
-.container-wide:active .image6 {
-    transform: scale(1);
-    background-size: contain;
-    background-repeat: no-repeat;
-    transition: 0.5s;
-    background-color:#000;
-}
-
-
-
-
-.image7 {
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-size: cover;
-    background-image: url("websiteAssets/art/traditional2.jpg");
-    transition: 0.4s ease
-}
-
-.image7:hover {
-    transform: scale(1.1)    
-}
-
-.container-wide:active .image7 {
-    transform: scale(1);
-    background-size: contain;
-    background-repeat: no-repeat;
-    transition: 0.5s;
-    background-color:#000;
-}
-
-
-
-
-.image8 {
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-size: cover;
-    background-image: url("websiteAssets/art/traditional3.jpg");
-    transition: 0.4s ease
-}
-
-.image8:hover {
-    transform: scale(1.1)    
-}
-
-.container-wide:active .image8 {
-    transform: scale(1);
-    background-size: contain;
-    background-repeat: no-repeat;
-    transition: 0.5s;
-    background-color:#000;
-}
-
-
-
-
-.image9 {
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-size: cover;
-    background-image: url("websiteAssets/art/traditional4.jpg");
-    transition: 0.4s ease
-}
-
-.image9:hover {
-    transform: scale(1.1)    
-}
-
-.container-wide:active .image9 {
-    transform: scale(1);
-    background-size: contain;
-    background-repeat: no-repeat;
-    transition: 0.5s;
-    background-color:#000;
-}
-
-
-
-
-.image10 {
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-size: cover;
-    background-image: url("websiteAssets/art/traditional5.jpg");
-    transition: 0.4s ease
-}
-
-.image10:hover {
-    transform: scale(1.1)    
-}
-
-.container-wide:active .image10 {
-    transform: scale(1);
-    background-size: contain;
-    background-repeat: no-repeat;
-    transition: 0.5s;
-    background-color:#000;
-}
-
-
-
-.image11 {
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-size: cover;
-    background-image: url("websiteAssets/art/traditional6.jpg");
-    transition: 0.4s ease
-}
-
-.image11:hover {
-    transform: scale(1.1)    
-}
-
-.container-wide:active .image11 {
-    transform: scale(1);
-    background-size: contain;
-    background-repeat: no-repeat;
-    transition: 0.5s;
-    background-color:#000;
-}
-
-
-.image12 {
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-size: cover;
-    background-image: url("websiteAssets/art/traditional7.jpg");
-    transition: 0.4s ease
-}
-
-.image12:hover {
-    transform: scale(1.1)    
-}
-
-.container-wide:active .image12 {
-    transform: scale(1);
-    background-size: contain;
-    background-repeat: no-repeat;
-    transition: 0.5s;
-    background-color:#000;
-}
-
-
-.image13 {
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-size: cover;
-    background-image: url("websiteAssets/art/painting1.png");
-    transition: 0.4s ease
-}
-
-.image13:hover {
-    transform: scale(1.1)    
-}
-
-.container-wide:active .image13 {
-    transform: scale(1);
-    background-size: contain;
-    background-repeat: no-repeat;
-    transition: 0.5s;
-    background-color:#000;
-}
-
-
-.image14 {
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-size: cover;
-    background-image: url("websiteAssets/art/painting2.png");
-    transition: 0.4s ease
-}
-
-.image14:hover {
-    transform: scale(1.1)    
-}
-
-.container-wide:active .image14 {
-    transform: scale(1);
-    background-size: contain;
-    background-repeat: no-repeat;
-    transition: 0.5s;
-    background-color:#000;
-}
-
-
-.image15 {
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-size: cover;
-    background-image: url("websiteAssets/art/painting3.jpg");
-    transition: 0.4s ease
-}
-
-.image15:hover {
-    transform: scale(1.1)    
-}
-
-.container-wide:active .image15 {
-    transform: scale(1);
-    background-size: contain;
-    background-repeat: no-repeat;
-    transition: 0.5s;
-    background-color:#000;
-}
-
-
-.image16 {
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-size: cover;
-    background-image: url("websiteAssets/art/painting4.jpg");
-    transition: 0.4s ease
-}
-
-.image16:hover {
-    transform: scale(1.1)    
-}
-
-.container-wide:active .image16 {
-    transform: scale(1);
-    background-size: contain;
-    background-repeat: no-repeat;
-    transition: 0.5s;
-    background-color:#000;
+@media (max-width: 420px) {
+    .big {
+        font-size: clamp(1.75rem, 8vw, 2.5rem);
+    }
+
+    .main_content h2 {
+        font-size: 1.5rem;
+    }
+
+    .wrapper .sidebar ul li {
+        padding: 6px 8px;
+    }
 }

@@ -1,12 +1,12 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Samson's Home page</title>
    <!-- <LINK REL="SHORTCUT ICON" href="./images/samson.ico">-->
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <!-- <script scr="D:\squamson\python\main.js"></script>-->
     <!--<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">-->
 </head>
 
@@ -20,19 +20,18 @@
                 <div class="profile_picture"></div>
 
                 <ul>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="index.shtml">Home</a></li>
                     <li><a href="projects.html">Projects</a></li>
-                    <li><a href="professional.html">Professional</a></li>
                     <li><a href="art.html">Art</a></li>
                     <li><a href="hobbies.html">Hobbies</a></li>
                     <li><a href="academics.html">Academics</a></li>
-                    <li><a href="project_archive.html">Archive</a></li>
+                    <!-- <li><a href="project_archive.html">Archive</a></li> -->
                 </ul>
 
                 <h3 class="footer">
-                    <br><b>Email</b><br><a href="mailto:samsonsongwu@gmail.com">samsonsongwu@gmail.com</a><br>
+                    <br><b>Email</b><br><a>samsonsongwu [at] gmail [.] com</a><br>
                     <br>Github<br><a href="https://github.com/smeason">smeason</a><br>
-                    <br><b>Resume</b><br><a href="websiteAssets\documents\Samson_Resume_2026">October 2026</a><br>
+                    <br><b>Resume</b><br><a href="websiteAssets/documents/Samson_Resume_2026.pdf">October 2026</a><br>
                     <br>Website made by Samson Wu<br>
                 </h3>
             </div>
@@ -46,11 +45,11 @@
                     <td class="left bottom_padding">
                         <h2>Northeastern University | Masters</h2>
                         <p>MS Robotics in Khoury College of Computer Sciences on the Boston Campus.
-                            Expeceted graduation Dec 2028.
+                            Expected graduation Dec 2028.
                         </p>
                     </td>
                     <td>
-                        <img src="websiteAssets/NortheasternLogoRed.png" style="width:300px; height: auto;">
+                        <img src="websiteAssets/optimized/academics/NortheasternLogoRed.webp" style="width:300px; height: auto;" loading="eager" fetchpriority="high" decoding="async">
                     </td>
                 </tr>
                 
@@ -65,33 +64,33 @@
                         </p>
                     </td>
                     <td>
-                        <img src="websiteAssets/university-of-toronto-logo.png" style="width:300px; height: auto;">
+                        <img src="websiteAssets/optimized/academics/university-of-toronto-logo.webp" style="width:300px; height: auto;" loading="lazy" decoding="async">
                     </td>
                 </tr>
                 <tr>
                     <td class="left bottom_padding">
                         <center>
                             <div class = "slideshow-container" style="display:block; margin-bottom:50px; margin-left:60px;">
-                                <div class = "mySlides1 fade">
-                                    <img src = "websiteAssets/bridge1.JPG" style='height: 100%; width: 100%; object-fit: contain'/>
+                                <div class="slide fade">
+                                    <img src = "websiteAssets/optimized/academics/bridge1.webp" style='height: 100%; width: 100%; object-fit: contain' loading="lazy" decoding="async">
                                 </div>
 
-                                <div class = "mySlides1 fade">
-                                    <img src = "websiteAssets/bridge2.JPG" style='height: 100%; width: 100%; object-fit: contain'/>
+                                <div class="slide fade">
+                                    <img src = "websiteAssets/optimized/academics/bridge2.webp" style='height: 100%; width: 100%; object-fit: contain' loading="lazy" decoding="async">
                                 </div>
 
-                                <div class = "mySlides1 fade">
-                                    <img src = "websiteAssets/bridge3.JPG" style='height: 100%; width: 100%; object-fit: contain'/>
+                                <div class="slide fade">
+                                    <img src = "websiteAssets/optimized/academics/bridge3.webp" style='height: 100%; width: 100%; object-fit: contain' loading="lazy" decoding="async">
                                 </div>
 
-                                <div class = "mySlides1 fade">
-                                    <img src = "websiteAssets/bridge4.JPG" style='height: 100%; width: 100%; object-fit: contain'/>
+                                <div class="slide fade">
+                                    <img src = "websiteAssets/optimized/academics/bridge4.webp" style='height: 100%; width: 100%; object-fit: contain' loading="lazy" decoding="async">
                                 </div>
 
 
                                 <!-- buttons-->
-                                <a class="prev" onclick="plusSlides(-1,0)">&#10094;</a>
-                                <a class="next" onclick="plusSlides(1,0)">&#10095;</a>
+                                <button type="button" class="prev" data-slide-step="-1" aria-label="Previous image">&#10094;</button>
+                                <button type="button" class="next" data-slide-step="1" aria-label="Next image">&#10095;</button>
 
 
                             </div>
@@ -104,34 +103,14 @@
                         <p>I completed the IB (International Baccelaurete) Program with a 41/45, and average of 98.7%.</p>
                     </td>
                     <td class="top_padding">
-                        <img src="websiteAssets/dp-programme-logo-en.png" style="width:300px; height: auto;">
+                        <img src="websiteAssets/optimized/dp-programme-logo-en.webp" style="width:300px; height: auto;" loading="lazy" decoding="async">
                     </td>
                 </tr>
             </table>
         </div>
     </div>
+    <script src="main.js" defer></script>
 
-    <script>
-        var slideIndex = [1,1];
-        var slideId = ["mySlides1", "mySlides2"]
-        showSlides(1, 0);
-        showSlides(1, 1);
-
-        function plusSlides(n, no) {
-            showSlides(slideIndex[no] += n, no);
-        }
-
-        function showSlides(n, no) {
-            var i;
-            var x = document.getElementsByClassName(slideId[no]);
-            if (n > x.length) {slideIndex[no] = 1}
-            if (n < 1) {slideIndex[no] = x.length}
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            x[slideIndex[no]-1].style.display = "block";
-        }
-    </script>
 </body>
 
 
