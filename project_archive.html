@@ -12,31 +12,24 @@
 
 <body>
 
+    <header class="site-header">
+        <a class="site-brand" href="index.shtml" aria-label="Samson Wu home">
+            <img class="site-avatar" src="websiteAssets/selfpics/ID_photo_87.jpg" alt="" width="52" height="52">
+            <span class="site-name">Samson Wu</span>
+        </a>
+        <nav class="site-nav" aria-label="Main navigation">
+            <ul>
+                <li><a href="index.shtml">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="art.html">Art</a></li>
+                <li><a href="hobbies.html">Hobbies</a></li>
+                <li><a href="academics.html">Academics</a></li>
+                <li><a href="project_archive.html" aria-current="page">Archive</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <div class="wrapper">
-        <center>
-            <div class="sidebar">
-                <h2>SAMSON WU</h2>
-
-                <div class="profile_picture"></div>
-
-                <ul>
-                    <li><a href="index.shtml">Home</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="art.html">Art</a></li>
-                    <li><a href="hobbies.html">Hobbies</a></li>
-                    <li><a href="academics.html">Academics</a></li>
-                    <li><a href="project_archive.html">Archive</a></li>
-                </ul>
-
-                <h3 class="footer">
-                    <br><b>Email</b><br><a href="mailto:samsonsongwu@gmail.com">samsonsongwu@gmail.com</a><br>
-                    <br>Github<br><a href="https://github.com/smeason">smeason</a><br>
-                    <br><b>Resume</b><br><a href="websiteAssets/documents/Samson_Resume_2026.pdf">October 2026</a><br>
-                    <br>Website made by Samson Wu<br>
-                </h3>
-            </div>
-        </center>
-
         <div class="main_content">
 
             <h1 class="big">Coding</h1>
@@ -54,6 +47,29 @@
             <h1 class="top_padding" style="padding-bottom:0.8em;">Projects</h1>
 
             <table class="coding_margin">
+                <tr class="bridge-project-row" style="background-color: rgb(255, 225, 214);">
+                    <td>
+                        <h2>Matboard Bridge Project</h2>
+                        <p>For my structural engineering class, my group designed and built a bridge that ranked fourth strongest in the class.</p>
+                        <div class="slideshow-container">
+                            <div class="slide fade">
+                                <img src="websiteAssets/optimized/academics/bridge1.webp" alt="Bridge project image 1" loading="lazy" decoding="async">
+                            </div>
+                            <div class="slide fade">
+                                <img src="websiteAssets/optimized/academics/bridge2.webp" alt="Bridge project image 2" loading="lazy" decoding="async">
+                            </div>
+                            <div class="slide fade">
+                                <img src="websiteAssets/optimized/academics/bridge3.webp" alt="Bridge project image 3" loading="lazy" decoding="async">
+                            </div>
+                            <div class="slide fade">
+                                <img src="websiteAssets/optimized/academics/bridge4.webp" alt="Bridge project image 4" loading="lazy" decoding="async">
+                            </div>
+                            <button type="button" class="prev" data-slide-step="-1" aria-label="Previous image">&#10094;</button>
+                            <button type="button" class="next" data-slide-step="1" aria-label="Next image">&#10095;</button>
+                        </div>
+                    </td>
+                </tr>
+
                 <tr style="background-color: rgb(255, 225, 214);">
                     <td>
                         <h2>Boggle</h2>
@@ -115,6 +131,15 @@
             </table>
         </div>
     </div>
+    <footer class="home-footer">
+        <div class="home-footer-inner">
+            <ul>
+                <li><span>Email</span><a href="mailto:samsonsongwu@gmail.com">samsonsongwu@gmail.com</a></li>
+            </ul>
+            <p>Website made by Samson Wu</p>
+        </div>
+    </footer>
+    <script src="main.js" defer></script>
 
 </body>
 
