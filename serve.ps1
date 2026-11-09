@@ -29,7 +29,7 @@ try {
     while ($listener.IsListening) {
         $context = $listener.GetContext()
         $relativePath = [Uri]::UnescapeDataString($context.Request.Url.AbsolutePath.TrimStart('/'))
-        if ([string]::IsNullOrWhiteSpace($relativePath)) { $relativePath = 'index.shtml' }
+        if ([string]::IsNullOrWhiteSpace($relativePath)) { $relativePath = 'index.html' }
 
         $filePath = [IO.Path]::GetFullPath((Join-Path $siteRoot $relativePath))
         if (-not $filePath.StartsWith($siteRoot, [StringComparison]::OrdinalIgnoreCase) -or -not (Test-Path -LiteralPath $filePath -PathType Leaf)) {
